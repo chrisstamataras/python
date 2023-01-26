@@ -33,7 +33,6 @@ resources = {
 continue_serving = True
 user_input = ""
 money = 0
-bag = 0
 water_in_tank = resources["water"]
 milk_in_tank = resources["milk"]
 coffee_in_tank = resources["coffee"]
@@ -58,7 +57,7 @@ while continue_serving:
     if user_ingredients["coffee"] > coffee_in_tank:
         print("Sorry there is not enough coffee")
         user_input = ""
-    if user_ingredients["water"] < water_in_tank and user_ingredients["milk"] < milk_in_tank and user_ingredients["coffee"] < coffee_in_tank:
+    if user_ingredients["water"] <= water_in_tank and user_ingredients["milk"] <= milk_in_tank and user_ingredients["coffee"] <= coffee_in_tank:
         print("Please insert coins.")
         quarters = int(input("How many quarters?: ")) * 0.25
         dimes = int(input("How many dimes?: ")) * 0.10
